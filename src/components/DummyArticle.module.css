@@ -1,0 +1,27 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    content-visibility: auto;
+}
+.article:not(:last-of-type) {
+    margin-bottom: 2rem;
+    border-bottom: 2px dashed rgb(95, 93, 93);
+}
+
+.article h2,
+.article p {
+    max-width: 40rem;
+}
+
+.article img,
+.article img.top {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.article img.imageTop {
+    object-position: top;
+}
