@@ -15,6 +15,14 @@
     max-width: 40rem;
 }
 
+.article h2 {
+    margin: 2rem 0 0.5rem;
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(90deg, rgb(4, 93, 128) 0%, rgb(46, 121, 61) 100%);
+    background-clip: text;
+}
+
 .article img,
 .article img.top {
     width: 100%;

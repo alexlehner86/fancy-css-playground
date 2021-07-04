@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Project Info
 
 Trying out new CSS properties and features like [content-visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
