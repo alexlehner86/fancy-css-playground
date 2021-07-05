@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
-    content-visibility: auto;
 }
 .article:not(:last-of-type) {
     margin-bottom: 2rem;

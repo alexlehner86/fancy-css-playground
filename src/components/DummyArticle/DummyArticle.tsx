@@ -5,6 +5,7 @@ interface DummyArticleProps {
     imageName: string;
     imagePositionTop: boolean;
     altText: string;
+    videoUrl: string;
 }
 
 const DummyArticle: React.FunctionComponent<DummyArticleProps> = props => {
@@ -33,6 +34,15 @@ const DummyArticle: React.FunctionComponent<DummyArticleProps> = props => {
                 et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
                 sit amet.
             </p>
+            <iframe
+                width="560"
+                height="315"
+                src={props.videoUrl}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd

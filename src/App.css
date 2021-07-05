@@ -1,32 +1,38 @@
 header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  background-color: #282c34;
-  color: white;
-  width: 100%;
-  padding: 1rem;
-  -webkit-box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.86);
-  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.86);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #282c34;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.86);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.86);
 }
 
 header h1 {
-  margin: 0;
-  font-size: 1.4rem;
+    margin: 0;
+    font-size: 1.4rem;
 }
 
 main {
-  min-height: 100vh;
-  padding: 5rem 0;
+    min-height: 100vh;
+    padding: 5rem 0;
 }
 
-div.link-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-div.link-wrapper a[href] {
-  padding: 1rem;
-  border: 2px solid black;
-  font-weight: bold;
+.info-box p {
+    padding: 1rem;
+    border: 2px solid black;
+}
+.info-box a[href] {
+    font-weight: bold;
+}
+
+.blog-content-visibility article {
+    content-visibility: auto;
 }
