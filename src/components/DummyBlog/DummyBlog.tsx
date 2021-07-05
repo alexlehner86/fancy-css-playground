@@ -4,10 +4,16 @@ import DummyArticle from '../DummyArticle/DummyArticle';
 
 interface DummyBlogProps {
     contentVisibilityAuto: boolean;
+    containIntrinsicSize: boolean;
 }
 
 const DummyBlog: React.FunctionComponent<DummyBlogProps> = props => {
-    const blogClass = props.contentVisibilityAuto ? 'blog-content-visibility' : 'blog-standard';
+    let blogClass = 'blog-standard';
+    if (props.contentVisibilityAuto && props.containIntrinsicSize) {
+        blogClass = 'blog-content-visibility-and-size';
+    } else if (props.contentVisibilityAuto) {
+        blogClass = 'blog-content-visibility';
+    }
     return (
         <div className={blogClass}>
             <DummyArticle

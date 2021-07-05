@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import ContentVisibility1 from './pages/ContentVisibility1';
 import ContentVisibility2 from './pages/ContentVisibility2';
+import ContentVisibility3 from './pages/ContentVisibility3';
+import Home from './pages/Home';
 
 
 function App() {
@@ -24,8 +26,11 @@ function App() {
                         <Route path="/contentvisibility2">
                             <ContentVisibility2 />
                         </Route>
+                        <Route path="/contentvisibility3">
+                            <ContentVisibility3 />
+                        </Route>
                         <Route path="/">
-                            Welcome to my Fancy CSS Playground!
+                            <Home />
                         </Route>
                     </Switch>
                 </Router>

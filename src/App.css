@@ -20,6 +20,10 @@ main {
     padding: 5rem 0;
 }
 
+.default-padding {
+    padding: 1rem;
+}
+
 .info-box {
     display: flex;
     align-items: center;
@@ -33,6 +37,10 @@ main {
     font-weight: bold;
 }
 
-.blog-content-visibility article {
+.blog-content-visibility article,
+.blog-content-visibility-and-size article {
     content-visibility: auto;
+}
+.blog-content-visibility-and-size article {
+    contain-intrinsic-size: 1460px;
 }
