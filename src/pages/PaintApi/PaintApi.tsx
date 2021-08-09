@@ -11,6 +11,14 @@ const PaintApi: React.FunctionComponent = () => (
             The CSS Painting API — part of the CSS Houdini umbrella of APIs — allows developers to write
             JavaScript functions that can draw directly into an element's background, border, or content.
         </p>
+        <textarea
+            name="example-textarea"
+            id="checkerboard-textarea"
+            rows={5}
+            autoComplete="off"
+            spellCheck="false"
+            placeholder="checkmate"
+        ></textarea>
         <h2 className={styles.headline_stroke}>
             Magical Styling with Houdini
         </h2>

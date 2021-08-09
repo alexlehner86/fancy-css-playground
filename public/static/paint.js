@@ -43,5 +43,26 @@ class SvgUnderlinePaintWorklet {
     }
 }
 
-// Register the paint worklet. This makes it available in CSS.
+/**
+ * Source: https://developers.google.com/web/updates/2018/01/paintapi
+ */
+class CheckerboardPainter {
+    paint(ctx, geom, properties) {
+        // Use `ctx` as if it was a normal canvas
+        const colors = ['red', 'black'];
+        const size = 64;
+        for (let y = 0; y < geom.height / size; y++) {
+            for (let x = 0; x < geom.width / size; x++) {
+                const color = colors[(x + y) % colors.length];
+                ctx.beginPath();
+                ctx.fillStyle = color;
+                ctx.rect(x * size, y * size, size, size);
+                ctx.fill();
+            }
+        }
+    }
+}
+
+// Register the paint worklets. This makes them available in CSS.
 registerPaint('svg-underline', SvgUnderlinePaintWorklet);
+registerPaint('checkerboard', CheckerboardPainter);

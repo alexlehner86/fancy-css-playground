@@ -4,10 +4,24 @@
     align-items: flex-start;
     padding: 0 1rem;
 }
+.container textarea {
+    box-sizing: border-box;
+    background-color: rgb(73, 73, 73);
+    border: 0.5rem solid black;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    padding: 0.125em 0.25em;
+    width: calc(100% - 2rem);
+}
+.container textarea::placeholder {
+    color: white;
+}
 
 .headline_stroke {
     margin: 2rem 0 0;
-    color: rgb(4, 93, 128);
+    padding-bottom: 0.1em;
+    color: #161718;
     text-decoration: underline;
     text-decoration-color: rgba(53, 211, 48, 0.4);
 }
@@ -28,12 +42,17 @@
         --svg-underline-pos: 33;
         /* use inside path */
         --svg-path: path(`M 0, 92 H var(--svg-underline-pos) `);
-        --svg-stroke: rgba(53, 211, 48, 0.4);
+        --svg-stroke: rgba(255, 0, 0, 0.4);
         --svg-stroke-width: 25;
         /* animate it on hover */
         transition: --svg-underline-pos 1s ease-in-out;
     }
     .headline_stroke:hover {
         --svg-underline-pos: 100;
+    }
+
+    .container textarea {
+        background-color: none;
+        background-image: paint(checkerboard);
     }
 }
