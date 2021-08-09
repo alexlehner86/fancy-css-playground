@@ -6,6 +6,9 @@ const Home: React.FunctionComponent = () => (
         Welcome to my Fancy CSS Playground!
         <ul>
             <li>
+                <Link to="/paintapi">Paint API</Link>
+            </li>
+            <li>
                 Render optimization with content-visibility
                 <ol>
                     <li>

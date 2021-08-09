@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.headline_stroke {
+    margin: 2rem 0 0;
+    color: rgb(4, 93, 128);
+    text-decoration: underline;
+    text-decoration-color: rgba(53, 211, 48, 0.4);
+}
+
+/* Define custom property for x position of svg underline to ensure smooth transition  */
+@property --svg-underline-pos {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@supports (background-image: paint(something)) {
+    .headline_stroke {
+        text-decoration: none;
+        /* paint worklet defined in ./static/paint.js */
+        background-image: paint(svg-underline);
+        /* set initial position */
+        --svg-underline-pos: 33;
+        /* use inside path */
+        --svg-path: path(`M 0, 92 H var(--svg-underline-pos) `);
+        --svg-stroke: rgba(53, 211, 48, 0.4);
+        --svg-stroke-width: 25;
+        /* animate it on hover */
+        transition: --svg-underline-pos 1s ease-in-out;
+    }
+    .headline_stroke:hover {
+        --svg-underline-pos: 100;
+    }
+}

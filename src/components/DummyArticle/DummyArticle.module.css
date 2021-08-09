@@ -15,40 +15,11 @@
 }
 
 .article h2 {
-    margin: 2rem 0 0;
-    padding: 0 1rem 1rem;
+    margin: 1rem 0 0;
     font-size: 2rem;
     color: transparent;
     background: linear-gradient(90deg, rgb(4, 93, 128) 0%, rgb(46, 121, 61) 100%);
     background-clip: text;
-}
-
-/* Define custom property for x position of svg underline to ensure smooth transition  */
-@property --svg-underline-pos {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 0;
-}
-
-@supports (background-image: paint(something)) {
-    .article h2 {
-        color: rgb(4, 93, 128);
-        background: initial;
-        background-clip: initial;
-        /* paint worklet defined in ./static/paint.js */
-        background-image: paint(svg-underline);
-        /* set initial position */
-        --svg-underline-pos: 33;
-        /* use inside path */
-        --svg-path: path(`M 1, 62 H var(--svg-underline-pos) `);
-        --svg-stroke: rgba(53, 211, 48, 0.4);
-        --svg-stroke-width: 25;
-        /* animate it on hover */
-        transition: --svg-underline-pos 1s ease-in-out;
-    }
-    .article h2:hover {
-        --svg-underline-pos: 90;
-    }
 }
 
 .article img,
