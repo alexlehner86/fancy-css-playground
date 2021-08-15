@@ -1,9 +1,22 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 1rem;
+    padding: 0 1rem 1rem;
 }
+
+.container h2 {
+    display: inline-block;
+    margin: 1.5rem 0 0;
+    padding-bottom: 0.1em;
+    color: #161718;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 0, 0, 0.4);
+    text-decoration-thickness: 5px;
+}
+
+.container p {
+    margin: 1rem 0;
+    padding: 0;
+}
+
 .container textarea {
     box-sizing: border-box;
     background-color: rgb(73, 73, 73);
@@ -18,15 +31,13 @@
     color: white;
 }
 
-.headline_stroke {
-    margin: 2rem 0 0;
-    padding-bottom: 0.1em;
-    color: #161718;
-    text-decoration: underline;
-    text-decoration-color: rgba(53, 211, 48, 0.4);
-}
-
-/* Define custom property for x position of svg underline to ensure smooth transition  */
+/*
+ * Define custom property for x position of svg underline as a number value to enable transition.
+ * The @property rule represents a custom property registration directly in a stylesheet without
+ * having to run any JS. Valid @property rules result in a registered custom property, as if
+ * CSS.registerProperty had been called with equivalent parameters.
+ * See: https://developer.mozilla.org/en-US/docs/Web/CSS/@property
+*/
 @property --svg-underline-pos {
     syntax: "<number>";
     inherits: false;
@@ -34,7 +45,7 @@
 }
 
 @supports (background-image: paint(something)) {
-    .headline_stroke {
+    .container h2 {
         text-decoration: none;
         /* paint worklet defined in ./static/paint.js */
         background-image: paint(svg-underline);
@@ -45,9 +56,10 @@
         --svg-stroke: rgba(255, 0, 0, 0.4);
         --svg-stroke-width: 25;
         /* animate it on hover */
-        transition: --svg-underline-pos 1s ease-in-out;
+        transition: --svg-stroke 1s ease-in-out, --svg-underline-pos 1s ease-in-out;
     }
-    .headline_stroke:hover {
+    .container h2:hover {
+        --svg-stroke: rgba(248, 7, 7, 0.8);
         --svg-underline-pos: 100;
     }
 
