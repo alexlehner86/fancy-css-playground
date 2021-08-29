@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
+import A11yFeatures from './pages/A11yFeatures/A11yFeatures';
 import ContentVisibility1 from './pages/ContentVisibility1';
 import ContentVisibility2 from './pages/ContentVisibility2';
 import ContentVisibility3 from './pages/ContentVisibility3';
@@ -24,8 +25,8 @@ function App() {
                     {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
                     <Switch>
-                        <Route path="/paintapi">
-                            <PaintApi />
+                        <Route path="/a11yfeatures">
+                            <A11yFeatures />
                         </Route>
                         <Route path="/contentvisibility1">
                             <ContentVisibility1 />
@@ -35,6 +36,9 @@ function App() {
                         </Route>
                         <Route path="/contentvisibility3">
                             <ContentVisibility3 />
+                        </Route>
+                        <Route path="/paintapi">
+                            <PaintApi />
                         </Route>
                         <Route path="/">
                             <Home />

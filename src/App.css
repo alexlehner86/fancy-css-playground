@@ -30,8 +30,13 @@ main {
     padding-top: 5rem;
 }
 
-.default-padding {
-    padding: 1rem;
+.default-container {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.default-container.no-center {
+    margin: 0;
 }
 
 .info-box {
@@ -54,4 +59,12 @@ main {
     font-size: 1.15em;
     letter-spacing: 0.025em;
     padding: 0 0.25rem;
+}
+
+a, a:visited {
+    color: rgb(13, 63, 13);
+}
+
+li {
+    line-height: 1.5;
 }

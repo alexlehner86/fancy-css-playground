@@ -2,9 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FunctionComponent = () => (
-    <div className="default-padding">
+    <div className="default-container no-center">
+        <h2>Table of Contents</h2>
         Welcome to my Fancy CSS Playground!
         <ul>
+            <li>
+                <Link to="/a11yfeatures">Accessibility Features</Link>
+            </li>
             <li>
                 <Link to="/paintapi">CSS Painting API and Properties &amp; Values API</Link>
             </li>

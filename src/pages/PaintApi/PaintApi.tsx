@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './PaintApi.module.css';
 
 const PaintApi: React.FunctionComponent = () => (
-    <div className={styles.container}>
+    <div className={'default-container ' + styles.container}>
         <h2>
             Magical Styling with Houdini
         </h2>
