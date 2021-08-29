@@ -1,3 +1,5 @@
+import './DummyBlog.css';
+
 import React from 'react';
 
 import DummyArticle from '../DummyArticle/DummyArticle';

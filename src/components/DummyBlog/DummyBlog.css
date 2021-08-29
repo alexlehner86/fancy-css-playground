@@ -1,0 +1,9 @@
+.blog-content-visibility article,
+.blog-content-visibility-and-size article {
+    /* Experimental feature. See: https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility */
+    content-visibility: auto;
+}
+.blog-content-visibility-and-size article {
+    /* Experimental feature. See: https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size */
+    contain-intrinsic-size: 1460px;
+}

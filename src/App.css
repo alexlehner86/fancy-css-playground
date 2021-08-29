@@ -47,14 +47,6 @@ main {
     font-weight: bold;
 }
 
-.blog-content-visibility article,
-.blog-content-visibility-and-size article {
-    content-visibility: auto;
-}
-.blog-content-visibility-and-size article {
-    contain-intrinsic-size: 1460px;
-}
-
 .code {
     background-color: #eee;
     font-family: monospace;
