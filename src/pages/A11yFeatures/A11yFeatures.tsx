@@ -58,9 +58,23 @@ const A11yFeatures: React.FunctionComponent = () => {
                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
             <h3>No more motion sickness</h3>
+            <p className={styles.infoBox + ' ' + styles.prefersReducedMotion}>
+                According to your system settings, <strong>you prefer reduced motion!</strong>
+            </p>
+            <p className={styles.infoBox + ' ' + styles.noMotionPreference}>
+                According to your system settings, <strong>you have no motion preference!</strong>
+            </p>
             <p>
                 The <span className="code">prefers-reduced-motion</span> CSS media feature is used to detect if the user has requested
                 that the system minimize the amount of non-essential motion it uses.
+            </p>
+            <p className={styles.linkContainer}>
+                <a
+                    className={styles.prominentLink}
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >Find out more</a>
             </p>
         </div>
     );
