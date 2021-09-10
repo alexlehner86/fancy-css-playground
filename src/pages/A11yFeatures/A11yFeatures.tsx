@@ -8,7 +8,7 @@ const A11yFeatures: React.FunctionComponent = () => {
     return (
         <div className="default-container">
             <h2>Accessibility Features</h2>
-            <h3 className={styles.highlight}>Visible focus for keyboard users only</h3>
+            <h3>Visible focus for keyboard users only</h3>
             <p>
                 Most blind users and many users with motor disabilities navigate websites with a keyboard. They depend on
                 strong visual indicators (e.g. an outline) that highlight the element that currently has keyboard focus.
@@ -22,6 +22,10 @@ const A11yFeatures: React.FunctionComponent = () => {
                 should be made evident on the element. In other words: Only when they are needed, e.g. for users navigating via keyboard.
             </p>
             <h4>Example with :focus pseudo-class</h4>
+            <form>
+                <label htmlFor="fav-color-1">Favorite Color</label>
+                <input id="fav-color-1" type="text" placeholder="red, green etc." />
+            </form>
             <button
                 className={styles.expansionPanelHeader}
                 aria-expanded={isPanel1Visible}
@@ -36,6 +40,10 @@ const A11yFeatures: React.FunctionComponent = () => {
                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
             <h4>Example with :focus-visible pseudo-class</h4>
+            <form>
+                <label htmlFor="fav-color-2">Favorite Color</label>
+                <input id="fav-color-2" type="text" placeholder="red, green etc." className={styles.keyboardOnly} />
+            </form>
             <button
                 className={styles.expansionPanelHeader + ' ' + styles.keyboardOnly}
                 aria-expanded={isPanel2Visible}
@@ -49,7 +57,7 @@ const A11yFeatures: React.FunctionComponent = () => {
                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
-            <h3 className={styles.highlight}>No more motion sickness</h3>
+            <h3>No more motion sickness</h3>
             <p>
                 The <span className="code">prefers-reduced-motion</span> CSS media feature is used to detect if the user has requested
                 that the system minimize the amount of non-essential motion it uses.
