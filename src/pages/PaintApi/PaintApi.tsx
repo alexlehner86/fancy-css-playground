@@ -4,6 +4,12 @@ import styles from './PaintApi.module.css';
 
 const PaintApi: React.FunctionComponent = () => (
     <div className={'default-container ' + styles.container}>
+        <p className={'feature-hint ' + styles.supportsPaintApi}>
+            <strong>Your browser supports the Painting API.</strong>
+        </p>
+        <p className={'feature-hint ' + styles.noPaintApiSupport}>
+            <strong>Your browser doesn't support the Painting API.</strong>
+        </p>
         <h2>
             Magical Styling with Houdini
         </h2>

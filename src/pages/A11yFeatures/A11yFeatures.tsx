@@ -58,11 +58,11 @@ const A11yFeatures: React.FunctionComponent = () => {
                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
             <h3>No more motion sickness</h3>
-            <p className={styles.infoBox + ' ' + styles.prefersReducedMotion}>
-                According to your system settings, <strong>you prefer reduced motion!</strong>
+            <p className={'feature-hint ' + styles.prefersReducedMotion}>
+                According to your system settings, you prefer <strong>reduced motion</strong>.
             </p>
-            <p className={styles.infoBox + ' ' + styles.noMotionPreference}>
-                According to your system settings, <strong>you have no motion preference!</strong>
+            <p className={'feature-hint ' + styles.noMotionPreference}>
+                According to your system settings, you have <strong>no motion preference</strong>.
             </p>
             <p>
                 The <span className="code">prefers-reduced-motion</span> CSS media feature is used to detect if the user has requested

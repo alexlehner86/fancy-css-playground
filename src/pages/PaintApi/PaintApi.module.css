@@ -14,7 +14,6 @@
 
 .container p {
     margin: 1rem 0;
-    padding: 0;
 }
 
 .container textarea {
@@ -31,6 +30,13 @@
     color: white;
 }
 
+p.supportsPaintApi {
+    display: none;
+}
+p.noPaintApiSupport {
+    border-color: rgb(148, 15, 26);
+}
+
 /*
  * Define custom property for x position of svg underline as a number value to enable transition.
  * The @property rule represents a custom property registration directly in a stylesheet without
@@ -45,6 +51,13 @@
 }
 
 @supports (background-image: paint(something)) {
+    p.supportsPaintApi {
+        display: block;
+    }
+    p.noPaintApiSupport {
+        display: none;
+    }
+
     .container h2 {
         text-decoration: none;
         /* paint worklet defined in ./static/paint.js */
