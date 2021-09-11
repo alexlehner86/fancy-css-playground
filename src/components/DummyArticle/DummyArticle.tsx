@@ -9,6 +9,7 @@ interface DummyArticleProps {
 }
 
 const DummyArticle: React.FunctionComponent<DummyArticleProps> = props => {
+    const assetsImgUrl = process.env.PUBLIC_URL + '/assets/img/';
     return (
         <article className={styles.article}>
             <h2>{props.heading}</h2>
@@ -21,7 +22,7 @@ const DummyArticle: React.FunctionComponent<DummyArticleProps> = props => {
                 sit amet.
             </p>
             <img
-                src={'/assets/img/' + props.imageName}
+                src={assetsImgUrl + props.imageName}
                 alt={props.altText}
                 title="© Alexander Lehner"
                 className={props.imagePositionTop ? styles.imageTop : ''}

@@ -1,6 +1,13 @@
 # Project Info
 
-Trying out new CSS properties and features like [content-visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Trying out new CSS properties and features like:
+- Reduce motion sickness with [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+- Visible focus for keyboard users with [:focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
+- [CSS Painting API](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API)
+- Registering custom properties with e.g. [@property](https://developer.mozilla.org/en-US/docs/Web/CSS/@property)
+- Render optimization with [content-visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility).
+
+Check out the [live version](https://alexlehner86.github.io/fancy-css-playground/#/) on GitHub Pages. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
