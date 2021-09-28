@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import DummyBlog from '../components/DummyBlog/DummyBlog';
+import DummyBlog from '../../components/DummyBlog/DummyBlog';
 
 const ContentVisibility2: React.FunctionComponent = () => (
     <React.Fragment>

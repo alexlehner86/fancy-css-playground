@@ -1,18 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import DummyBlog from '../components/DummyBlog/DummyBlog';
+import DummyBlog from '../../components/DummyBlog/DummyBlog';
 
-const ContentVisibility1: React.FunctionComponent = () => (
+const ContentVisibility3: React.FunctionComponent = () => (
     <React.Fragment>
         <div className="info-box">
             <p>
-                #1 Blog example
-                without <a
+                #3 Blog example
+                with <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility"
                     target="_blank"
                     rel="noreferrer noopener"
-                >content-visibility</a>.
+                >content-visibility</a> and
+                with <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >contain-intrinsic-size</a>.
             </p>
             <nav>
                 <ul>
@@ -28,8 +33,8 @@ const ContentVisibility1: React.FunctionComponent = () => (
                 </ul>
             </nav>
         </div>
-        <DummyBlog contentVisibilityAuto={false} containIntrinsicSize={false} />
+        <DummyBlog contentVisibilityAuto={true} containIntrinsicSize={true} />
     </React.Fragment>
 );
 
-export default ContentVisibility1;
+export default ContentVisibility3;

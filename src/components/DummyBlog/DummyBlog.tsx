@@ -16,8 +16,8 @@ const DummyBlog: React.FunctionComponent<DummyBlogProps> = props => {
     } else if (props.contentVisibilityAuto) {
         blogClass = 'blog-content-visibility';
     }
-    return (
-        <div className={blogClass}>
+    const listOfArticles = (
+        <React.Fragment>
             <DummyArticle
                 heading="Beautiful Gran Canaria"
                 imageName="gran_canaria_mountains.jpg"
@@ -74,6 +74,15 @@ const DummyBlog: React.FunctionComponent<DummyBlogProps> = props => {
                 altText="Mountainside view in Yosemite National Park, California, USA"
                 videoUrl="https://www.youtube.com/embed/9fJEFi3ccwI?controls=0"
             />
+        </React.Fragment>
+    );
+    return (
+        <div className={blogClass}>
+            {listOfArticles}
+            {listOfArticles}
+            {listOfArticles}
+            {listOfArticles}
+            {listOfArticles}
         </div>
     );
 };

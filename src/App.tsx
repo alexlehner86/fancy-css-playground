@@ -4,9 +4,9 @@ import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 
 import A11yFeatures from './pages/A11yFeatures/A11yFeatures';
-import ContentVisibility1 from './pages/ContentVisibility1';
-import ContentVisibility2 from './pages/ContentVisibility2';
-import ContentVisibility3 from './pages/ContentVisibility3';
+import ContentVisibility1 from './pages/ContentVisibility/ContentVisibility1';
+import ContentVisibility2 from './pages/ContentVisibility/ContentVisibility2';
+import ContentVisibility3 from './pages/ContentVisibility/ContentVisibility3';
 import Home from './pages/Home';
 import PaintApi from './pages/PaintApi/PaintApi';
 
