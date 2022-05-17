@@ -1,0 +1,28 @@
+.page {
+    padding: 0 1rem;
+}
+
+.filePicker {
+    position: relative;
+    border-radius: 3px;
+    background-color: rgb(49, 4, 92);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.filePicker:focus-within,
+.filePicker:hover {
+    outline: 2px solid black;
+    outline-offset: 2px;
+}
+
+.filePicker input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}

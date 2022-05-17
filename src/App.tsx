@@ -7,6 +7,7 @@ import A11yFeatures from './pages/A11yFeatures/A11yFeatures';
 import ContentVisibility1 from './pages/ContentVisibility/ContentVisibility1';
 import ContentVisibility2 from './pages/ContentVisibility/ContentVisibility2';
 import ContentVisibility3 from './pages/ContentVisibility/ContentVisibility3';
+import FileUpload from './pages/FileUpload/FileUpload';
 import Home from './pages/Home';
 import PaintApi from './pages/PaintApi/PaintApi';
 
@@ -38,6 +39,9 @@ function App() {
                     </Route>
                     <Route path="/paintapi">
                         <PaintApi />
+                    </Route>
+                    <Route path="/fileupload">
+                        <FileUpload />
                     </Route>
                     <Route path="/">
                         <Home />

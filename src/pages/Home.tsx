@@ -26,6 +26,9 @@ const Home: React.FunctionComponent = () => (
                     </li>
                 </ol>
             </li>
+            <li>
+                <Link to="/fileupload">Styled File Upload</Link>
+            </li>
             <li>Other stuff, coming soon...</li>
         </ul>
     </div>
