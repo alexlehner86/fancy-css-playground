@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fancy-css-playground/static/css/main.a68aa2b3.chunk.css",
-    "main.js": "/fancy-css-playground/static/js/main.7133c8e7.chunk.js",
-    "main.js.map": "/fancy-css-playground/static/js/main.7133c8e7.chunk.js.map",
-    "runtime-main.js": "/fancy-css-playground/static/js/runtime-main.3aa66fe9.js",
-    "runtime-main.js.map": "/fancy-css-playground/static/js/runtime-main.3aa66fe9.js.map",
-    "static/js/2.384871cb.chunk.js": "/fancy-css-playground/static/js/2.384871cb.chunk.js",
-    "static/js/2.384871cb.chunk.js.map": "/fancy-css-playground/static/js/2.384871cb.chunk.js.map",
-    "static/js/3.cf7de194.chunk.js": "/fancy-css-playground/static/js/3.cf7de194.chunk.js",
-    "static/js/3.cf7de194.chunk.js.map": "/fancy-css-playground/static/js/3.cf7de194.chunk.js.map",
+    "main.css": "/fancy-css-playground/static/css/main.ca46bfd5.chunk.css",
+    "main.js": "/fancy-css-playground/static/js/main.8a3a9129.chunk.js",
+    "main.js.map": "/fancy-css-playground/static/js/main.8a3a9129.chunk.js.map",
+    "runtime-main.js": "/fancy-css-playground/static/js/runtime-main.4b410aed.js",
+    "runtime-main.js.map": "/fancy-css-playground/static/js/runtime-main.4b410aed.js.map",
+    "static/js/2.9f251639.chunk.js": "/fancy-css-playground/static/js/2.9f251639.chunk.js",
+    "static/js/2.9f251639.chunk.js.map": "/fancy-css-playground/static/js/2.9f251639.chunk.js.map",
+    "static/js/3.d9f1f87d.chunk.js": "/fancy-css-playground/static/js/3.d9f1f87d.chunk.js",
+    "static/js/3.d9f1f87d.chunk.js.map": "/fancy-css-playground/static/js/3.d9f1f87d.chunk.js.map",
     "index.html": "/fancy-css-playground/index.html",
-    "static/css/main.a68aa2b3.chunk.css.map": "/fancy-css-playground/static/css/main.a68aa2b3.chunk.css.map",
-    "static/js/2.384871cb.chunk.js.LICENSE.txt": "/fancy-css-playground/static/js/2.384871cb.chunk.js.LICENSE.txt"
+    "static/css/main.ca46bfd5.chunk.css.map": "/fancy-css-playground/static/css/main.ca46bfd5.chunk.css.map",
+    "static/js/2.9f251639.chunk.js.LICENSE.txt": "/fancy-css-playground/static/js/2.9f251639.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3aa66fe9.js",
-    "static/js/2.384871cb.chunk.js",
-    "static/css/main.a68aa2b3.chunk.css",
-    "static/js/main.7133c8e7.chunk.js"
+    "static/js/runtime-main.4b410aed.js",
+    "static/js/2.9f251639.chunk.js",
+    "static/css/main.ca46bfd5.chunk.css",
+    "static/js/main.8a3a9129.chunk.js"
   ]
 }
