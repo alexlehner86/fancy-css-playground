@@ -1,28 +1,49 @@
+
 .page {
+    --filePickerColor: rgb(49, 4, 92);
     padding: 0 1rem;
 }
 
-.filePicker {
+form .filePickerRow {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--filePickerColor);
+    border-radius: 5px;
+    width: min(30rem, 100%);
+}
+
+form label[for].filePicker {
     position: relative;
-    border-radius: 3px;
-    background-color: rgb(49, 4, 92);
+    background-color: var(--filePickerColor);
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
     color: white;
     font-size: 1rem;
     font-weight: bold;
+    margin: 0;
     padding: 0.5rem 1rem;
+    white-space: nowrap;
 }
 
-.filePicker:focus-within,
-.filePicker:hover {
+form label[for].filePicker:focus-within,
+form label[for].filePicker:hover {
     outline: 2px solid black;
     outline-offset: 2px;
 }
 
-.filePicker input[type=file] {
+form label[for].filePicker input[type=file] {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     opacity: 0;
+}
+
+form .filePickerRow p {
+    margin: 0;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
