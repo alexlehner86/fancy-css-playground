@@ -14,7 +14,7 @@ const FileUpload: React.FunctionComponent = () => {
     return (
         <div className={styles.page}>
             <h2>
-                Form with Styled File Upload
+                Form with Styled File Input
             </h2>
             <form action="#">
                 <div className={styles.filePickerRow}>
@@ -26,14 +26,13 @@ const FileUpload: React.FunctionComponent = () => {
                             accept=".pdf"
                             aria-describedby="selected-file"
                             onChange={event => onFilePickerChange(event)}
-                        ></input>
+                        />
                     </label>
                     <p id="selected-file" aria-hidden="true">{selectedFile}</p>
-                    {/* problem with NVDA: https://github.com/nvaccess/nvda/issues/11742 */}
                 </div>
             </form>
             <h2>
-                Form with Standard File Upload
+                Form with Standard File Input
             </h2>
             <form action="#">
                 <label htmlFor="filepicker-standard">
