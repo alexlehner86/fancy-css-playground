@@ -1,0 +1,29 @@
+.page {
+    --dialog-border-color: rgb(64, 60, 71);
+    padding: 0 1rem;
+}
+
+.page dialog {
+    border: 0.125rem solid var(--dialog-border-color);
+    border-radius: 4px;
+    box-shadow: 0 11px 15px -7px #0003,0 24px 38px 3px #00000024,0 9px 46px 8px #0000001f;
+}
+
+.page dialog::backdrop {
+    background: rgba(36, 32, 20, 0.5);
+    backdrop-filter: blur(0.25rem);
+}
+
+.page dialog h3 {
+    margin-top: 0;
+}
+
+.page dialog .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.page dialog .buttonContainer button:first-child {
+    margin-right: 0.5rem;
+}

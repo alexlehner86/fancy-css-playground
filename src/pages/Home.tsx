@@ -29,7 +29,10 @@ const Home: React.FunctionComponent = () => (
             <li>
                 <Link to="/fileupload">Styled File Upload</Link>
             </li>
-            <li>Other stuff, coming soon...</li>
+            <li>
+                <Link to="/dialog">Testing the Native Dialog Element</Link>
+            </li>
+            <li>To be continued...</li>
         </ul>
     </div>
 );

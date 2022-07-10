@@ -6,7 +6,7 @@ const A11yFeatures: React.FunctionComponent = () => {
     const [isPanel2Visible, setIsPanel2Visible] = useState(false);
 
     return (
-        <div className="default-container">
+        <div className={'default-container ' + styles.page}>
             <h2>Accessibility Features</h2>
             <h3>Visible focus for keyboard users only</h3>
             <p>
