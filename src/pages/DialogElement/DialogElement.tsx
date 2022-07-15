@@ -22,16 +22,13 @@ const DialogElement: React.FunctionComponent = () => {
         }
     }
     const onCancelButtonClick = () => {
-        const dialogHtmlElement = dialogRef.current;
-        if (dialogHtmlElement) {
-            dialogHtmlElement.returnValue = DIALOG_CANCEL_VALUE;
-            dialogHtmlElement.close();
-        }
+        dialogRef.current?.close(DIALOG_CANCEL_VALUE);
     }
 
     useEffect(() => {
         // Manually set close event listener for dialog, as React doesn't support this event yet.
         const handleDialogClose = () => {
+            console.warn(dialogRef.current?.returnValue);
             if (dialogRef.current?.returnValue === DIALOG_CONFIRM_VALUE) {
                 const favColor = favColorRef.current?.value ?? '';
                 const favMovie = favMovieRef.current?.value ?? '';
@@ -80,7 +77,7 @@ const DialogElement: React.FunctionComponent = () => {
                     </div>
                     <div className={styles.buttonContainer}>
                         <button type="button" onClick={onCancelButtonClick}>Cancel</button>
-                        <button className={styles.primaryBtn} value={DIALOG_CONFIRM_VALUE}>Confirm</button>
+                        <button type="submit" className={styles.primaryBtn} value={DIALOG_CONFIRM_VALUE}>Confirm</button>
                     </div>
                 </form>
             </dialog>

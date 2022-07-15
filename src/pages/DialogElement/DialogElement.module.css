@@ -39,11 +39,12 @@
 }
 
 .page dialog h3 {
+    color: var(--primary-color);
     margin-top: 0;
 }
 
 .page dialog p {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .page dialog div.formField {
@@ -56,6 +57,7 @@
 }
 
 .page dialog label {
+    color: var(--primary-color);
     flex: 1 1 0rem;
     font-size: 0.9em;
     margin-right: 0.5rem;
