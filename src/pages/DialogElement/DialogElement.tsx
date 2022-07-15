@@ -1,23 +1,47 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
+import { DIALOG_CANCEL_VALUE, DIALOG_CONFIRM_VALUE } from './DialogElement.const';
 import styles from './DialogElement.module.css';
 
 const DialogElement: React.FunctionComponent = () => {
     const dialogRef = useRef<HTMLDialogElement>(null);
+    const favColorRef = useRef<HTMLSelectElement>(null)
+    const favMovieRef = useRef<HTMLInputElement>(null)
+    const [dialogFormData, setDialogFormData] = useState('');
+
+    const onOpenDialogButtonClick = () => {
+        dialogRef.current?.showModal();
+    }
+    const onDialogContainerClick = (event: any) => {
+        // Get the coordinates of the click and check if it falls outside of the dialog’s rectangle.
+        // If it does, then the user has clicked the backdrop and we close the dialog.
+        const rect = dialogRef.current?.getBoundingClientRect();
+        if (rect && (event.clientY < rect.top || event.clientY > rect.bottom ||
+            event.clientX < rect.left || event.clientX > rect.right)) {
+            dialogRef.current?.close();
+        }
+    }
+    const onCancelButtonClick = () => {
+        const dialogHtmlElement = dialogRef.current;
+        if (dialogHtmlElement) {
+            dialogHtmlElement.returnValue = DIALOG_CANCEL_VALUE;
+            dialogHtmlElement.close();
+        }
+    }
 
     useEffect(() => {
         // Manually set close event listener for dialog, as React doesn't support this event yet.
-        dialogRef.current?.addEventListener('close', () => {
-            console.warn('closed dialog ' + dialogRef.current?.returnValue);
-        });
+        const handleDialogClose = () => {
+            if (dialogRef.current?.returnValue === DIALOG_CONFIRM_VALUE) {
+                const favColor = favColorRef.current?.value ?? '';
+                const favMovie = favMovieRef.current?.value ?? '';
+                setDialogFormData(`You selected the color "${favColor}" and entered the movie "${favMovie}".`);
+            }
+        };
+        const dialogHtmlElement = dialogRef.current;
+        dialogHtmlElement?.addEventListener('close', handleDialogClose);
+        return () => dialogHtmlElement?.removeEventListener('close', handleDialogClose);
     });
-
-    // https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element
-    // https://blog.logrocket.com/using-the-dialog-element/
-
-    const onOpenDialogClick = () => {
-        dialogRef.current?.showModal();
-    }
 
     return (
         <div className={styles.page}>
@@ -26,18 +50,21 @@ const DialogElement: React.FunctionComponent = () => {
             </h2>
             <button
                 type="button"
-                onClick={onOpenDialogClick}
+                onClick={onOpenDialogButtonClick}
             >
                 Open Modal Dialog
             </button>
-            <dialog ref={dialogRef}>
+            <p className="dialogFormData">
+                {dialogFormData}
+            </p>
+            <dialog ref={dialogRef} onClick={onDialogContainerClick}>
                 <h3>Personal Information</h3>
                 <p>Please tell me more about you. I want to get to know you better.</p>
-                <form method="dialog">
+                <form method="dialog" onClick={event => event.stopPropagation()}>
                     <div className={styles.formField}>
                         <label htmlFor="favColor">Favorite color:</label>
-                        <select id="favColor">
-                            <option value="default">Choose...</option>
+                        <select id="favColor" ref={favColorRef}>
+                            <option value="">Choose...</option>
                             <option>Red</option>
                             <option>Blue</option>
                             <option>Green</option>
@@ -45,11 +72,11 @@ const DialogElement: React.FunctionComponent = () => {
                     </div>
                     <div className={styles.formField}>
                         <label htmlFor="favMovie">Favorite movie:</label>
-                        <input id="favMovie" type="text" />
+                        <input id="favMovie" type="text" ref={favMovieRef} />
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button value="cancel">Cancel</button>
-                        <button className={styles.primaryBtn} value="confirm">Confirm</button>
+                        <button type="button" onClick={onCancelButtonClick}>Cancel</button>
+                        <button className={styles.primaryBtn} value={DIALOG_CONFIRM_VALUE}>Confirm</button>
                     </div>
                 </form>
             </dialog>
