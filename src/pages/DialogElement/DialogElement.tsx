@@ -54,11 +54,15 @@ const DialogElement: React.FunctionComponent = () => {
             >
                 Open Modal Dialog
             </button>
-            <p className="dialogFormData">
+            <p role="status">
                 {dialogFormData}
             </p>
-            <dialog ref={dialogRef} onClick={onDialogContainerClick}>
-                <h3>Personal Information</h3>
+            <dialog
+                aria-labelledby='dialog-personal-info-heading'
+                ref={dialogRef}
+                onClick={onDialogContainerClick}
+            >
+                <h3 id="dialog-personal-info-heading">Personal Information</h3>
                 <p>Please tell me more about you. I want to get to know you better.</p>
                 <form method="dialog" onClick={event => event.stopPropagation()}>
                     <div className={styles.formField}>
@@ -80,6 +84,10 @@ const DialogElement: React.FunctionComponent = () => {
                     </div>
                 </form>
             </dialog>
+            <p>
+                Find out more about the dialog element on&nbsp;
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" target="_blank" rel="noreferrer">MDN Web Docs</a>.
+            </p>
         </div>
     );
 };
