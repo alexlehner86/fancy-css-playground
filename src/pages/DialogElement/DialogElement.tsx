@@ -7,7 +7,6 @@ const DialogElement: React.FunctionComponent = () => {
     const favColorRef = useRef<HTMLSelectElement>(null)
     const favMovieRef = useRef<HTMLInputElement>(null)
     const formDialogRef = useRef<HTMLDialogElement>(null);
-    const simpleDialogRef = useRef<HTMLDialogElement>(null);
     const [dialogFormData, setDialogFormData] = useState('');
 
     const onOpenFormDialogClick = () => {
@@ -16,16 +15,10 @@ const DialogElement: React.FunctionComponent = () => {
     const onFormDialogCancelClick = () => {
         formDialogRef.current?.close(DIALOG_CANCEL_VALUE);
     }
-    const onOpenSimpleDialogClick = () => {
-        simpleDialogRef.current?.showModal();
-    }
-    const onSimpleDialogOkClick = () => {
-        simpleDialogRef.current?.close();
-    }
 
     const isClickOutsideOfDialog = (dialogEl: HTMLDialogElement, event: React.MouseEvent): boolean => {
         // Get the coordinates of the click and check if it falls outside of the dialog’s rectangle.
-        // If it does, then the user has clicked the backdrop and we close the dialog.
+        // If it does, then the user has clicked the backdrop outside of the dialog.
         const rect = dialogEl.getBoundingClientRect();
         return (event.clientY < rect.top || event.clientY > rect.bottom ||
             event.clientX < rect.left || event.clientX > rect.right);
@@ -34,12 +27,6 @@ const DialogElement: React.FunctionComponent = () => {
         const formDialogEl = formDialogRef.current;
         if (formDialogEl && isClickOutsideOfDialog(formDialogEl, event)) {
             formDialogEl.close(DIALOG_CANCEL_VALUE);
-        }
-    }
-    const onSimpleDialogContainerClick = (event: React.MouseEvent) => {
-        const simpleDialogEl = simpleDialogRef.current;
-        if (simpleDialogEl && isClickOutsideOfDialog(simpleDialogEl, event)) {
-            simpleDialogEl.close();
         }
     }
 
@@ -64,7 +51,8 @@ const DialogElement: React.FunctionComponent = () => {
             </h2>
             <p>
                 The native dialog element was added in HTML 5.2 and represents a part of an application that
-                a user interacts with to perform a task, for example a dialog box, inspector, or window.
+                a user interacts with to perform a task, for example a dialog box, inspector, or window. Click
+                the button below to open a form as a modal dialog.
             </p>
             <button
                 type="button"
@@ -73,18 +61,11 @@ const DialogElement: React.FunctionComponent = () => {
             >
                 Open Modal Dialog
             </button>
-            <button
-                type="button"
-                onClick={onOpenSimpleDialogClick}
-            >
-                Open Dialog (no aria-modal)
-            </button>
             <p role="status">
                 {dialogFormData}
             </p>
             <dialog
                 aria-labelledby='dialog-personal-info-heading'
-                aria-modal="true"
                 ref={formDialogRef}
                 onClick={onFormDialogContainerClick}
             >
@@ -120,21 +101,6 @@ const DialogElement: React.FunctionComponent = () => {
                         </button>
                     </div>
                 </form>
-            </dialog>
-            <dialog
-                ref={simpleDialogRef}
-                onClick={onSimpleDialogContainerClick}
-            >
-                <p>
-                    When a native dialog element is opened, the content outside of the dialog should be made inert for all
-                    users, including screen readers. Setting the attribute aria-modal="true" should not be necessary.
-                </p>
-                <button
-                    type="button"
-                    onClick={onSimpleDialogOkClick}
-                >
-                    OK
-                </button>
             </dialog>
             <p>
                 Find out more about the dialog element on&nbsp;
