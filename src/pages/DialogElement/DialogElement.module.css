@@ -20,6 +20,10 @@
     vertical-align: baseline;
 }
 
+.page button:not(:last-of-type) {
+    margin-right: 0.5rem;
+}
+
 .page button.primaryBtn {
     background: var(--primary-color);
     color: white;
@@ -78,8 +82,4 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
-}
-
-.page dialog .buttonContainer button:first-child {
-    margin-right: 0.5rem;
 }
