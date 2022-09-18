@@ -32,6 +32,9 @@ const Home: React.FunctionComponent = () => (
             <li>
                 <Link to="/dialog">Testing the Native Dialog Element</Link>
             </li>
+            <li>
+                <Link to="/haspseudoclass">Use Cases for the :has pseudo-class</Link>
+            </li>
             <li>To be continued...</li>
         </ul>
     </div>

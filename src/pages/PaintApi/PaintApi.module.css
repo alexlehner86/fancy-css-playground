@@ -34,7 +34,7 @@ p.supportsPaintApi {
     display: none;
 }
 p.noPaintApiSupport {
-    border-color: rgb(148, 15, 26);
+    border-color: var(--error-color);
 }
 
 /*

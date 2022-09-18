@@ -1,0 +1,119 @@
+.page {
+    max-width: 60rem;
+    padding-bottom: 1rem;
+}
+
+.page h3 {
+    border-left: 0.25rem solid var(--pretty-in-pink);
+    margin-top: 2rem;
+    padding-left: 0.5rem;
+}
+
+ul.contentCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin-block: 0.5rem;
+    margin-inline: 0;
+    padding: 0;
+}
+
+li.card {
+    border-radius: 0.25rem;
+    background-color: rgb(255, 222, 178);
+    padding: 1rem;
+    max-width: 25rem;
+}
+
+li.card h4 {
+    margin: 0 0 0.5em;
+}
+
+li.card p {
+    margin: 0;
+}
+
+li.card img {
+    aspect-ratio: 4 / 3;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    width: 40%;
+}
+
+li.card:has(img) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+}
+
+li.card:not(:has(img)) {
+    border-top: 0.4rem solid var(--pretty-in-pink);
+    padding-top: 0.6rem; /* 1rem - 0.4rem */
+}
+
+.page form {
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.page form fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page form fieldset legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.page form input[type="checkbox"] {
+    accent-color: var(--pretty-in-pink);
+}
+
+.page form button[type="reset"] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.2rem;
+    color: white;
+    background: var(--pretty-in-pink);
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.page form:has(input:checked) button[type="reset"] {
+    visibility: visible;
+    opacity: 1;
+}
+
+ul.nestedList {
+    display: inline-block;
+    margin: 0;
+}
+
+ul.nestedList li {
+    padding: 0.25rem;
+}
+
+ul.nestedList li:has(> ul) {
+    background: rgb(250, 195, 173);
+}
+
+ul.nestedList li:has(> ul) li {
+    font-style: italic;
+}
+
+ul.nestedList li:has(+ li) {
+    border-bottom: 1px dashed var(--pretty-in-pink);
+}

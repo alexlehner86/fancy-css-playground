@@ -99,7 +99,7 @@ a[href].prominentLink {
 @media screen and (prefers-reduced-motion: reduce) {
     p.prefersReducedMotion {
         display: block;
-        border-color: rgb(148, 15, 26);
+        border-color: var(--error-color);
     }
     p.noMotionPreference {
         display: none;

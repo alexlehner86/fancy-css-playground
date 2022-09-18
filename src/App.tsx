@@ -9,6 +9,7 @@ import ContentVisibility2 from './pages/ContentVisibility/ContentVisibility2';
 import ContentVisibility3 from './pages/ContentVisibility/ContentVisibility3';
 import DialogElement from './pages/DialogElement/DialogElement';
 import FileUpload from './pages/FileUpload/FileUpload';
+import HasPseudoClass from './pages/HasPseudoClass/HasPseudoClass';
 import Home from './pages/Home';
 import PaintApi from './pages/PaintApi/PaintApi';
 
@@ -46,6 +47,9 @@ function App() {
                     </Route>
                     <Route path="/dialog">
                         <DialogElement />
+                    </Route>
+                    <Route path="/haspseudoclass">
+                        <HasPseudoClass />
                     </Route>
                     <Route path="/">
                         <Home />

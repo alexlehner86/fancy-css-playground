@@ -29,7 +29,7 @@ const DummyBlog: React.FunctionComponent<DummyBlogProps> = props => {
                 heading="Is it Mars? Nope, Monument Valley!"
                 imageName="monument_valley.jpg"
                 imagePositionTop={true}
-                altText="Mountainside view on Gran Canaria with the sea in the background"
+                altText="Red, rocky plains of Monument Valley"
                 videoUrl="https://www.youtube.com/embed/yg0As_HOvJk?controls=0"
             />
             <DummyArticle

@@ -1,6 +1,7 @@
 # Project Info
 
 Trying out new CSS properties and features like:
+- The parent selector [:has](https://developer.mozilla.org/en-US/docs/Web/CSS/:has) and [container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries).
 - Reduce motion sickness with [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 - Visible focus for keyboard users with [:focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
 - [CSS Painting API](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API)
