@@ -3,6 +3,20 @@
     padding-bottom: 1rem;
 }
 
+p.noSupportForHas {
+    border-color: var(--error-color);
+}
+p.noSupportForHas:has(strong) {
+    display: none;
+}
+
+p.supportForHas {
+    display: none;
+}
+p.supportForHas:has(strong) {
+    display: block;
+}
+
 .page h3 {
     border-left: 0.25rem solid var(--pretty-in-pink);
     margin-top: 2rem;

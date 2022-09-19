@@ -8,6 +8,12 @@ const HasPseudoClass: React.FunctionComponent = () => {
     return (
         <div className={'default-container ' + styles.page}>
             <h2>Use Cases for :has pseudo-class</h2>
+            <p className={'feature-hint ' + styles.supportForHas}>
+                Your browser <strong>supports</strong> the :has pseudo-class.
+            </p>
+            <p className={'feature-hint ' + styles.noSupportForHas}>
+                Your browser <strong>doesn't support</strong> the :has pseudo-class.
+            </p>
             <h3>Content Cards</h3>
             <ul className={styles.contentCards}>
                 <li className={styles.card}>

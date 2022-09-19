@@ -73,7 +73,7 @@ li {
     line-height: 1.5;
 }
 
-p.feature-hint {
+:where(p.feature-hint) {
     padding: 1rem 0.5rem;
     border: 0.5rem dashed rgb(27, 92, 27);
     font-size: 1.1rem;
