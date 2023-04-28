@@ -31,7 +31,9 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      CSS.paintWorklet.addModule('%PUBLIC_URL%/static/paint.js');
+      if (CSS.paintWorklet) {
+        CSS.paintWorklet.addModule('%PUBLIC_URL%/static/paint.js');
+      }
     </script>
   </body>
 </html>
