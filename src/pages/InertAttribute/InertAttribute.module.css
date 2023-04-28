@@ -26,9 +26,8 @@ nav.mainMenu > ul > li > button {
 
 nav.mainMenu > ul > li > button[aria-expanded="true"] {
     text-decoration: underline;
-    text-decoration-thickness: 0.25rem;
+    text-decoration-thickness: 0.2rem;
     text-decoration-color: rgb(45, 45, 45);
-    text-underline-offset: 0.25rem;
 }
 
 nav.mainMenu > ul > li > button:focus {

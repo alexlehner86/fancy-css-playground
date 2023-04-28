@@ -33,9 +33,10 @@ const InertAttributePage: React.FunctionComponent = () => {
 
     return (
         <div className={styles.page}>
-            <h2>
-                Testing the inert HTML attribute
-            </h2>
+            <h2>Use Case for inert attribute</h2>
+            <p>
+                The following navigation menu uses inert for its hidden sub menus.
+            </p>
             <nav className={styles.mainMenu}>
                 <ul>
                     <li>
@@ -150,6 +151,16 @@ const InertAttributePage: React.FunctionComponent = () => {
                 elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
                 eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
                 dolor sit amet.
+            </p>
+            <h2>
+                The inert HTML attribute
+            </h2>
+            <p>
+                A global attribute indicating that the browser will ignore the element and its descendants.
+            </p>
+            <p>
+                Find out more about the inert HTML attribute on&nbsp;
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert" target="_blank" rel="noreferrer">MDN Web Docs</a>.
             </p>
         </div>
     );
