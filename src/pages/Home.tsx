@@ -10,6 +10,12 @@ const Home: React.FunctionComponent = () => (
                 <Link to="/a11yfeatures">Accessibility Features</Link>
             </li>
             <li>
+                <Link to="/dialog">Testing the Native Dialog Element</Link>
+            </li>
+            <li>
+                <Link to="/inert">Use Case for the inert HTML Attribute</Link>
+            </li>
+            <li>
                 <Link to="/paintapi">CSS Painting API and Properties &amp; Values API</Link>
             </li>
             <li>
@@ -28,9 +34,6 @@ const Home: React.FunctionComponent = () => (
             </li>
             <li>
                 <Link to="/fileupload">Styled File Upload</Link>
-            </li>
-            <li>
-                <Link to="/dialog">Testing the Native Dialog Element</Link>
             </li>
             <li>
                 <Link to="/haspseudoclass">Use Cases for the :has pseudo-class</Link>

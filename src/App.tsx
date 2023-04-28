@@ -12,6 +12,7 @@ import FileUpload from './pages/FileUpload/FileUpload';
 import HasPseudoClass from './pages/HasPseudoClass/HasPseudoClass';
 import Home from './pages/Home';
 import PaintApi from './pages/PaintApi/PaintApi';
+import InertAttributePage from './pages/InertAttribute/InertAttribute';
 
 function App() {
     const toHomepageLinkImg = process.env.PUBLIC_URL + '/assets/icon/emoji_nature.svg';
@@ -47,6 +48,9 @@ function App() {
                     </Route>
                     <Route path="/dialog">
                         <DialogElement />
+                    </Route>
+                    <Route path="/inert">
+                        <InertAttributePage />
                     </Route>
                     <Route path="/haspseudoclass">
                         <HasPseudoClass />

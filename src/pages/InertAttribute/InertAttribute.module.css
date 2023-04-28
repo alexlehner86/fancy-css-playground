@@ -1,0 +1,83 @@
+.page {
+    padding: 0 1rem;
+}
+
+nav.mainMenu > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav.mainMenu > ul > li {
+    background: white;
+    position: relative;
+}
+
+nav.mainMenu > ul > li > button {
+    appearance: none;
+    background: rgb(245, 232, 154);
+    border: none;
+    border-radius: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 100%;
+    padding: 1rem 1.25rem;
+}
+
+nav.mainMenu > ul > li > button[aria-expanded="true"] {
+    text-decoration: underline;
+    text-decoration-thickness: 0.25rem;
+    text-decoration-color: rgb(45, 45, 45);
+    text-underline-offset: 0.25rem;
+}
+
+nav.mainMenu > ul > li > button:focus {
+    outline: none;
+}
+
+nav.mainMenu > ul > li > button:focus-visible,
+nav.mainMenu > ul > li > button:hover {
+    outline: 3px solid black;
+    outline-offset: -8px;
+}
+
+.subMenu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+.subMenu[data-is-ready] {
+    display: block;
+}
+
+.subMenu > ul {
+    background: rgb(19 19 19 / 0.9);
+    list-style: none;
+    padding: 1rem;
+    transition: transform 0.4s ease-in-out;
+}
+
+.subMenu[inert] > ul {
+    transform: translateY(-100%);
+}
+
+.subMenu:not([inert]) > ul {
+    transform: translateY(0);
+}
+
+.subMenu > ul li {
+    border-top: 1px solid white;
+    padding: 0.5rem 0;
+}
+
+.subMenu > ul li:last-child {
+    border-bottom: 1px solid white;
+}
+
+.subMenu > ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
