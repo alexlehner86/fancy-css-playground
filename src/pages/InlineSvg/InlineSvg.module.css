@@ -1,0 +1,48 @@
+.page {
+    padding: 0 1rem;
+}
+
+.page button {
+    appearance: none;
+    background: none;
+    border: 1px solid black;
+    box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page button:hover {
+    background: rgb(229, 229, 229);
+}
+
+.page svg {
+    fill: currentColor;
+    height: 2rem;
+    width: 2rem;
+}
+
+.page .formField {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.page button.iconBtn {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.page button.textBtn {
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.page button.textBtn svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
