@@ -16,6 +16,9 @@ const Home: React.FunctionComponent = () => (
                 <Link to="/inert">Use Case for the inert HTML Attribute</Link>
             </li>
             <li>
+                <Link to="/inlinesvg">Flexible Styling of Inline SVGs</Link>
+            </li>
+            <li>
                 <Link to="/paintapi">CSS Painting API and Properties &amp; Values API</Link>
             </li>
             <li>
