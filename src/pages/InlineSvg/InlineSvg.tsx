@@ -5,7 +5,7 @@ import { EnergyIcon } from '../../components/icons/EnergyIcon';
 import { HeartIcon } from '../../components/icons/HeartIcon';
 
 const InlineSvgPage: React.FunctionComponent = () => {
-    const [selectedColor, setSelectedColor] = useState('#e25353');
+    const [selectedColor, setSelectedColor] = useState('#f118a6');
 
     const onColorChange = (event: ChangeEvent<HTMLInputElement>) => {
         setSelectedColor(event.target.value);
