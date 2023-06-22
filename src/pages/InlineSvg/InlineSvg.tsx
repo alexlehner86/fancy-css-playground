@@ -23,7 +23,12 @@ const InlineSvgPage: React.FunctionComponent = () => {
                 <label htmlFor="button-color">Button Color</label>
             </div>
             <h3>Example 1: Icon Button</h3>
-            <button type="button" className={styles.iconBtn} style={{ 'color': selectedColor }}>
+            <button
+                type="button"
+                className={styles.iconBtn}
+                style={{ 'color': selectedColor }}
+                aria-label='Like'
+            >
                 <HeartIcon />
             </button>
             <h3>Example 2: Button with Icon and Text</h3>
