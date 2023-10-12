@@ -51,6 +51,7 @@ li.card p {
 li.card img {
     aspect-ratio: 4 / 3;
     border-radius: 0.25rem;
+    flex-shrink: 0;
     object-fit: cover;
     width: 40%;
 }
