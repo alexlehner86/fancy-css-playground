@@ -41,6 +41,9 @@ const Home: React.FunctionComponent = () => (
             <li>
                 <Link to="/haspseudoclass">Use Cases for the :has pseudo-class</Link>
             </li>
+            <li>
+                <Link to="/scrollpadding">Demo page for scroll-padding property</Link>
+            </li>
             <li>To be continued...</li>
         </ul>
     </div>

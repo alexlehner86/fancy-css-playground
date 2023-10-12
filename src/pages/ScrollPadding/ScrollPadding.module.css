@@ -1,0 +1,13 @@
+.page {
+    max-width: 30rem;
+    padding-bottom: 4rem;
+}
+
+.bottomAside {
+    position: fixed;
+    bottom: 0;
+    background: rgb(192, 218, 255);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}

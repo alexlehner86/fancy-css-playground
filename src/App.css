@@ -2,30 +2,46 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding: 4rem 0;
+}
+
 header {
     position: fixed;
     top: 0;
     z-index: 1;
     display: flex;
-    background-color: #282c34;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(90deg, rgba(40,44,52,1) 0%, rgba(55,80,129,1) 100%);
     color: white;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.86);
     box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.86);
+}
+
+header a {
+    display: grid;
+    place-content: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    line-height: 1;
+    height: 3rem;
+    width: 3rem;
 }
 
 header a img {
     height: 2rem;
     width: 2rem;
 }
-header a:hover img {
-    opacity: 0.7;
+
+header a:hover {
+    background: rgb(79, 87, 102);
 }
 
 header h1 {
     margin: 0;
-    margin-left: 0.5rem;
     font-size: 1.4rem;
 }
 
