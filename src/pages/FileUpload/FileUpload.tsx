@@ -28,7 +28,7 @@ const FileUpload: React.FunctionComponent = () => {
                             onChange={event => onFilePickerChange(event)}
                         />
                     </label>
-                    <p id="selected-file" aria-hidden="true">{selectedFile}</p>
+                    <p id="selected-file">{selectedFile}</p>
                 </div>
             </form>
             <h2>
